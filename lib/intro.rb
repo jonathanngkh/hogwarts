@@ -1,8 +1,23 @@
 class Text_Master
-  def string_splitter(string)
+  def split_string(string)
     string.scan(/\w[^.,!?]+\S+/)
   end
+
+  def spit_lines(array_of_lines)
+    array_of_lines.each do |line|
+      puts line
+      sleep(0.8)
+    end
+  end
+
+  def crunch(string)
+    spit_lines(split_string(string))
+  end
 end
+
+text_master = Text_Master.new
+string = 'Who am i, you say? I AM THE ONE, THE ONLY, JOHNNNNN CENAAAAAAAA! BADADA DAAAAAAAA, BAB DA BA DAAAA'
+text_master.crunch(string)
 
 # puts "Hi, I'm Professor Jonngkh. ▼"
 
